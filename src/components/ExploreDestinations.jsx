@@ -5,67 +5,83 @@ export default function ExploreDestinations() {
     const features = [
         {
             icon: <Percent className="w-6 h-6 text-blue-600" />,
-            title: "Cheap Flights",
-            desc: "Fly at cheap prices. Book at the most affordable prices stress-free!",
+            title: " Quick & Easy Flight Booking",
+            desc: "Book your domestic or international flights in just a few clicks—fast, simple, and secure.",
         },
         {
             icon: <Search className="w-6 h-6 text-indigo-600" />,
-            title: "Search & Compare",
-            desc: "Weigh and compare from 1000+ options for your flight journeys!",
+            title: " Unbeatable Airfare Deals",
+            desc: "Get exclusive discounts on USA, Europe, and Canada routes with no hidden charges.",
         },
         {
             icon: <Clock className="w-6 h-6 text-purple-600" />,
-            title: "Help 24/7",
-            desc: "We are always here for you — reach us 24 hours a day, 7 days a week.",
+            title: " 24/7 Travel Assistance",
+            desc: "Our dedicated support team is available around the clock to help you plan or modify your trip..",
         },
         {
             icon: <ShieldCheck className="w-6 h-6 text-pink-600" />,
-            title: "Deals Everyday",
-            desc: "Check out with confidence. Our users always get our new deals.",
+            title: " Top Airlines, Trusted Service",
+            desc: "Fly with globally recognized airlines and enjoy smooth, reliable travel every time.",
         },
     ];
 
     const continents = [
         {
-            name: "North America",
-            img: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80",
+            name: "Rome",
+            img: "https://i.postimg.cc/RVX7xtMY/Explore-Your-Dream-Destinations-rome.jpg",
             link: "/north-america",
         },
+
         {
-            name: "Africa",
-            img: "https://images.unsplash.com/photo-1588361861040-15f8c27b4d9b?auto=format&fit=crop&w=800&q=80",
-            link: "/africa",
-        },
-        {
-            name: "Australia",
-            img: "https://images.unsplash.com/photo-1506976785307-8732e854ad89?auto=format&fit=crop&w=800&q=80",
+            name: "Las Vegas ",
+            img: "https://i.postimg.cc/KvJPhTZJ/Explore-Your-Dream-Destinations-las-vegas.jpg",
             link: "/australia",
         },
         {
-            name: "South America",
-            img: "https://images.unsplash.com/photo-1518459031867-a89b944bffe4?auto=format&fit=crop&w=800&q=80",
+            name: "London",
+            img: "https://i.postimg.cc/9FJdH9W6/Explore-Your-Dream-Destinations-london.jpg",
             link: "/south-america",
         },
         {
-            name: "Europe",
-            img: "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=800&q=80",
+            name: "New York",
+            img: "https://i.postimg.cc/BQMTfFqh/Explore-Your-Dream-Destinations-new-york.jpg",
             link: "/europe",
         },
         {
-            name: "Asia",
-            img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+            name: "Paris ",
+            img: "https://i.postimg.cc/dt42cCsK/Explore-Your-Dream-Destinations-Paris.jpg",
             link: "/asia",
         },
+        {
+            name: "Chicago",
+            img: "https://i.postimg.cc/YSGq8v2b/Explore-Your-Dream-Destinations-chicago.jpg",
+            link: "/asia",
+        },
+        // https://postimg.cc/gallery/K2p4TZg
+        // https://postimg.cc/gallery/kq1wTnB
     ];
 
     return (
         <section className="py-20 bg-white">
             {/* Top Features */}
+            <div className="text-center">
+
+                <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900">
+                    Fly to Your Favorite Destinations at Unbeatable Prices!
+
+
+                </h2>
+                <p className="text-gray-600 mb-8 leading-relaxed max-w-7xl mx-auto">
+                    Discover cheap flights from the USA to Europe and Canada with top airlines. Enjoy smooth booking, flexible fares, and travel without breaking your budget.
+
+                </p>
+            </div>
             <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto px-6">
+
                 {features.map((f, i) => (
                     <div
                         key={i}
-                        className="bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100 p-6 transition-all duration-300 text-center"
+                        className="bg-white rounded-2xl shadow-2xl hover:shadow-xl shadow-[#1A2E48]  border-white border-2 p-6 transition-all duration-300 text-center"
                     >
                         <div className="flex justify-center mb-4">{f.icon}</div>
                         <h3 className="font-semibold text-lg mb-2">{f.title}</h3>

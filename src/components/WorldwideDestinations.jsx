@@ -9,35 +9,35 @@ import {
 export default function WorldwideDestinations() {
     const destinations = [
         {
-            name: "New York",
-            img: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=400&q=80",
+            name: "Barcelona ",
+            img: "https://i.postimg.cc/X7VfPL02/Worldwide-Destinations-barcelona.jpg",
         },
         {
-            name: "Argentina",
-            img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&q=80",
+            name: "Berlin ",
+            img: "https://i.postimg.cc/028Y4nqV/Worldwide-Destinations-berlin.jpg",
         },
         {
-            name: "Amsterdam",
-            img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80",
+            name: "San Francisco. ",
+            img: "https://i.postimg.cc/GhcFfK1N/Worldwide-Destinations-san-fransisco.jpg",
         },
         {
-            name: "Barcelona",
-            img: "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=400&q=80",
+            name: "Venice",
+            img: "https://i.postimg.cc/dtq2f6Km/Worldwide-Destinations-venice.jpg",
         },
         {
-            name: "Dubai",
-            img: "https://images.unsplash.com/photo-1504274066651-8d31a536b11a?auto=format&fit=crop&w=400&q=80",
+            name: "Washington",
+            img: "https://i.postimg.cc/4NJ60PTq/Worldwide-Destinations-washington.jpg",
         },
         {
-            name: "Bangkok",
-            img: "https://images.unsplash.com/photo-1526481280691-7bdb1f4e05d4?auto=format&fit=crop&w=400&q=80",
+            name: "Los Angeles",
+            img: "https://i.postimg.cc/KYkvQ1cC/Worldwide-Destinations-los-angeles.jpg",
         },
     ];
 
     const benefits = [
         { icon: <CreditCard className="w-5 h-5 text-teal-600" />, text: "Easy Bookings" },
-        { icon: <RotateCcw className="w-5 h-5 text-teal-600" />, text: "Flight Changes" },
-        { icon: <PlaneTakeoff className="w-5 h-5 text-teal-600" />, text: "Cheapest Airfare" },
+        { icon: <RotateCcw className="w-5 h-5 text-teal-600" />, text: "Cheapest Airfare" },
+        { icon: <PlaneTakeoff className="w-5 h-5 text-teal-600" />, text: "Flexible Changes" },
         { icon: <Undo2 className="w-5 h-5 text-teal-600" />, text: "Fast Cancellations" },
     ];
 
@@ -45,9 +45,9 @@ export default function WorldwideDestinations() {
         <section className="bg-gray-50">
             {/* Worldwide Destinations */}
             <div className="py-16 text-center">
-                <h2 className="text-3xl font-bold text-gray-900 mb-3">Worldwide Destinations</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-3"> Top Flight Routes from the USA to Europe & Canada</h2>
                 <p className="text-gray-600 max-w-2xl mx-auto mb-10">
-                    We offer countless destinations to suit various interests from history and culture to natural beauty and gastronomy.
+                    Discover the most popular air routes at unbeatable prices. Fly from major U.S. cities to top European and Canadian destinations without overspending.
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-8 mb-10 px-6">
@@ -57,7 +57,7 @@ export default function WorldwideDestinations() {
                                 <img
                                     src={city.img}
                                     alt={city.name}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-contain"
                                 />
                             </div>
                             <p className="font-semibold text-gray-800">{city.name}</p>
@@ -65,9 +65,9 @@ export default function WorldwideDestinations() {
                     ))}
                 </div>
 
-                <button className="bg-teal-700 text-white px-8 py-3 rounded-md font-semibold shadow hover:bg-teal-800 transition-all">
-                    VIEW MORE
-                </button>
+                <a href="tel:+"> <button className="bg-teal-700 text-white px-8 py-3 rounded-md font-semibold shadow hover:bg-teal-800 transition-all animate-bounce">
+                    Call Us 
+                </button></a>
             </div>
 
             {/* Choosing Fareslist Section */}
@@ -75,16 +75,14 @@ export default function WorldwideDestinations() {
                 <div className="grid md:grid-cols-2 gap-10 items-center">
                     {/* Left Side Text */}
                     <div>
-                        <p className="italic text-gray-700 mb-2">Choosing Fareslist is</p>
+                        <p className="italic text-gray-700 mb-2">Choosing Air Travel Booking</p>
                         <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900">
-                            Your Path to the Best Flight Deals
+                            Your Path to Affordable Flights & Dream Vacations
+
                         </h2>
                         <p className="text-gray-600 mb-8 leading-relaxed">
-                            Finding the cheapest flights has never been simpler! With Fareslist, score amazing
-                            travel deals in just a few clicks. Choose your next journey and enjoy the savings
-                            while you fly to your favorite destinations around the globe. Be it last minute or
-                            from the top airlines, you get the most affordable airfares right here with us.
-                            Just give us a call — we’ll handle the rest!
+                            Finding great flight deals has never been this easy! With Air Travel Booking, you can explore worldwide destinations and book flights at unbeatable prices in just a few clicks. Whether you’re flying across the USA or to Europe and Canada, enjoy the lowest fares, flexible booking options, and trusted service—all in one place.
+
                         </p>
 
                         {/* Benefits grid */}
@@ -104,14 +102,14 @@ export default function WorldwideDestinations() {
                     {/* Right Side Images */}
                     <div className="flex flex-col gap-6">
                         <img
-                            src="https://www.fareslist.com/static/media/flight2.ca3907c89d7032c7c7b1.webp"
+                            src="https://i.postimg.cc/xdchzHjk/Your-Path-to-the-Best-Flight-Deals-1.jpg"
                             alt="Airport Traveler"
-                            className="rounded-br-4xl object-cover w-full h-64 md:h-72"
+                            className="rounded-br-4xl object-contain w-full h-64 md:h-72"
                         />
                         <img
-                            src="https://www.fareslist.com/static/media/FlightW.6d0bf689e82367f6fee5.webp"
+                            src="https://i.postimg.cc/VNdpCMsN/Your-Path-to-the-Best-Flight-Deals-2.jpg"
                             alt="Airplane in Sky"
-                            className="rounded-br-4xl object-cover w-full h-64 md:h-72"
+                            className="rounded-br-4xl object-contain w-full h-64 md:h-72"
                         />
                     </div>
                 </div>

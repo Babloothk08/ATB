@@ -4,9 +4,9 @@ import Form from './Form'
 export default function HeroSection() {
     return (
         <>
-            <div className='min-h-screen pt-28'
+            <div className='min-h-screen pt-28 bg-cover bg-center bg-no-repeat'
                 style={{
-                    backgroundImage: "url(https://www.fareslist.com/static/media/Farelist-banner.88845d631478a0d102fc.webp)"
+                    backgroundImage: "url(https://i.postimg.cc/MKd7JBWh/Banner-final-1.jpg)"
                 }}>
                 <section className='sm:flex sm:justify-evenly p-5 items-center'>
                     <Form />

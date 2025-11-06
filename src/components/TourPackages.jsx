@@ -92,10 +92,11 @@ export default function TourPackages() {
         <section className="py-16 px-6 lg:px-20 max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 gap-6  ">
                 <div className="max-w-xl">
-                    <h2 className="text-black font-semibold">Popular Flight Routes</h2>
+                    <h2 className="text-black font-semibold"> Top Flight Routes from the USA to Europe & Canada</h2>
                   
                     <p className="text-gray-500 mt-2">
-                        Amazing memories, adventures, and explorations does not need be too expensive!
+                      Discover the most popular air routes at unbeatable prices. Fly from major U.S. cities to top European and Canadian destinations without overspending.
+
                     </p>
                 </div>
 

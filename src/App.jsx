@@ -5,6 +5,7 @@ import ExploreDestinations from './components/ExploreDestinations'
 import WorldwideDestinations from './components/WorldwideDestinations'
 import TourPackages from './components/TourPackages'
 import SocialsSection from './components/SocialsSection'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -16,7 +17,7 @@ export default function App() {
               <a href="/">  <img className='h-16' src="https://i.postimg.cc/TP6w89Pc/ATB-LOGO-PNG.png" alt="" /> </a>
             </div>
             <div className={"flex items-center gap-2 text-xl md:text-2xl font-bold transition-colors"}>
-              <Phone className='h-8 w-8 text-black animate-wiggle' />    +1-(877) 527-7118
+              <Phone className='h-8 w-8 text-black animate-wiggle animate-pulse' />    +1-(877) 527-7118
             </div>
             <div className={"invisible items-center gap-2 text-xl md:text-2xl font-bold transition-colors"}>
 
@@ -41,6 +42,7 @@ export default function App() {
       <section>
         <SocialsSection/>
       </section>
+      <Footer/>
     </>
   )
 }
