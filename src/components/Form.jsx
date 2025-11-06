@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-    Plane, Search, MapPin, Calendar, Users, ArrowRight,
+    Plane, Search, MapPin, Calendar, Users, ArrowRight, Mail, Phone,
 } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
@@ -9,6 +9,8 @@ export default function Form() {
     const [toCity, setToCity] = useState('');
     const [departDate, setDepartDate] = useState('');
     const [passengers, setPassengers] = useState('1');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
     const [animatedIn, setAnimatedIn] = useState(false);
 
     useEffect(() => {
@@ -19,7 +21,7 @@ export default function Form() {
     const handleSearch = (e) => {
         e.preventDefault();
 
-        if (!fromCity || !toCity || !departDate) {
+        if (!fromCity || !toCity || !departDate || !email || !phone) {
             alert('Please fill in all required fields');
             return;
         }
@@ -30,15 +32,16 @@ export default function Form() {
             to_city: toCity,
             depart_date: departDate,
             passengers,
+            email,
+            phone,
         };
-
         // EmailJS service
         emailjs
             .send(
-                'YOUR_SERVICE_ID', // Replace with your EmailJS Service ID
-                'YOUR_TEMPLATE_ID', // Replace with your EmailJS Template ID
+                'service_zevqxwq', // Replace with your EmailJS Service ID
+                'template_ycnx81f', // Replace with your EmailJS Template ID
                 templateParams,
-                'YOUR_PUBLIC_KEY' // Replace with your EmailJS Public Key
+                'PMxk4HHiLtNPg0uiN' // Replace with your EmailJS Public Key
             )
             .then(
                 (response) => {
@@ -89,6 +92,37 @@ export default function Form() {
                                 onChange={(e) => setToCity(e.target.value)}
                                 placeholder="Destination city"
                                 className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-gray-900 font-medium group-hover:border-indigo-300"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Contact: Email & Phone */}
+                    <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+                        <div className="group">
+                            <label className="block text-lg font-semibold text-black mb-3 flex items-center gap-2">
+                                <Mail className="w-4 h-4 text-teal-600" />
+                                Email
+                            </label>
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                placeholder="you@example.com"
+                                className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all text-gray-900 font-medium group-hover:border-teal-300"
+                            />
+                        </div>
+
+                        <div className="group">
+                            <label className="block text-lg font-semibold text-black mb-3 flex items-center gap-2">
+                                <Phone className="w-4 h-4 text-emerald-600" />
+                                Phone
+                            </label>
+                            <input
+                                type="tel"
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
+                                placeholder="+1 555 555 5555"
+                                className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-gray-900 font-medium group-hover:border-emerald-300"
                             />
                         </div>
                     </div>

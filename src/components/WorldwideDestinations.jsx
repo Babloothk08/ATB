@@ -33,7 +33,7 @@ export default function WorldwideDestinations() {
             img: "https://i.postimg.cc/KYkvQ1cC/Worldwide-Destinations-los-angeles.jpg",
         },
     ];
-
+    // https://postimg.cc/gallery/fRNFXmD
     const benefits = [
         { icon: <CreditCard className="w-5 h-5 text-teal-600" />, text: "Easy Bookings" },
         { icon: <RotateCcw className="w-5 h-5 text-teal-600" />, text: "Cheapest Airfare" },

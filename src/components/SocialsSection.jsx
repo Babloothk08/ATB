@@ -7,21 +7,21 @@ export default function SocialsSection() {
             name: "Facebook",
             icon: <FaFacebookF className="w-5 h-5 text-[#1877F2]" />,
             title: " Top Airlines & Routes",
-            img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+            img: "https://i.postimg.cc/pXMhrbYn/Connect-with-us-in-our-Socials-y-all-2.jpg",
             text: "Fly confidently with leading carriers and enjoy access to major domestic and international routes.Whether it’s a quick getaway or a long adventure, we make every flight smooth and convenient.",
         },
         {
             name: "Instagram",
             icon: <FaInstagram className="w-5 h-5 text-[#E4405F]" />,
             title: "Fast & Secure Booking",
-            img: "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=800&q=80",
+            img: "https://i.postimg.cc/ryrRqFW6/Connect-with-us-in-our-Socials-y-all-3.jpg",
             text: "Book your flight in just a few clicks with our user-friendly platform. Your payments are safe, your data is protected, and your confirmation arrives instantly — no waiting, no hassle.",
         },
         {
             name: "Twitter",
             icon: <FaTwitter className="w-5 h-5 text-[#1DA1F2]" />,
             title: "24/7 Travel Support",
-            img: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80",
+            img: "https://i.postimg.cc/8PgJcQBv/Connect-with-us-in-our-Socials-y-all-4.jpg",
             text: "Our expert support team is available around the clock to assist you before, during, and after your trip. From booking guidance to travel updates, we’re here whenever you need us.",
         },
         // {
@@ -43,7 +43,7 @@ export default function SocialsSection() {
 
                 </h2>
                 <p className="text-gray-600 mb-12">
-                    ee what makes us the preferred choice for thousands of U.S. flyers traveling domestically and
+                    See what makes us the preferred choice for thousands of U.S. flyers traveling domestically and
                     Abroad.
                 </p>
 

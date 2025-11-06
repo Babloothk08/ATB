@@ -9,7 +9,7 @@ export default function Footer() {
                 {/* Logo & About */}
                 <div>
                     <img
-                        src="https://i.postimg.cc/TP6w89Pc/ATB-LOGO-PNG.png"
+                        src="https://i.postimg.cc/902Y24L8/ATB-LOGO-white-png.png"
                         alt="Logo"
                         className="h-16 mb-4"
                     />

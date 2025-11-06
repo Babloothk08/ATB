@@ -7,74 +7,69 @@ import "swiper/css/navigation";
 import { CalendarDays } from "lucide-react";
 import { Link } from "react-router-dom";
 
-
+// https://postimg.cc/gallery/QB5CMHg
 const tours = [
     {
         id: 1,
-        country: "Greece",
+        country: "Paris",
         title: "Santorini, Oia",
         rating: 5,
         reviews: 38,
         duration: "9 Days Tours",
         price: 180,
         image:
-            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=60",
+            "https://i.postimg.cc/7YygJTMR/Popular-Flight-Routes-Atlanta-ATL-Paris-CDG.jpg",
     },
     {
         id: 2,
-        country: "Maldives",
+        country: "Washington DC",
         title: "Hurawalhi Island",
         rating: 5,
         reviews: 18,
         duration: "9 Days Tours",
         price: 260,
-        image:
-            "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=60",
-    },
+        image:"https://i.postimg.cc/rwVxQXHb/Popular-Flight-Routes-Boston-BOS-Washington-D-C-DCA-IAD.jpg"    },
     {
         id: 3,
-        country: "Greece",
+        country: "London",
         title: "Santorini, Oia",
         rating: 5,
         reviews: 38,
         duration: "5 Days Tours",
         price: 180,
         image:
-            "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=60",
-    },
+         "https://i.postimg.cc/524LndrT/Popular-Flight-Routes-Dallas-DFW-London-LHR.jpg"    },
     {
         id: 4,
-        country: "Greece",
+        country: "Las Vegas",
         title: "Santorini, Oia",
         rating: 5,
         reviews: 38,
         duration: "5 Days Tours",
         price: 180,
         image:
-            "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=60",
-    },
+           "https://i.postimg.cc/3x8mn5qP/Popular-Flight-Routes-Los-Angeles-LAX-Las-Vegas-LAS.jpg"   },
     {
         id: 5,
-        country: "Greece",
+        country: "Miami",
         title: "Santorini, Oia",
         rating: 5,
         reviews: 38,
         duration: "5 Days Tours",
         price: 180,
         image:
-            "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=60",
-    },
-    {
-        id: 6,
-        country: "Greece",
-        title: "Santorini, Oia",
-        rating: 5,
-        reviews: 38,
-        duration: "5 Days Tours",
-        price: 180,
-        image:
-            "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=60",
-    },
+            "https://i.postimg.cc/bwyk3c54/Popular-Flight-Routes-New-York-JFK-LGA-Miami-MIA.jpg"   },
+    // {
+    //     id: 6,
+    //     country: "Greece",
+    //     title: "Santorini, Oia",
+    //     rating: 5,
+    //     reviews: 38,
+    //     duration: "5 Days Tours",
+    //     price: 180,
+    //     image:
+    //         "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=60",
+    // },
     // add more items to test sliding
 ];
 
@@ -149,7 +144,7 @@ export default function TourPackages() {
 
                                 <div className="relative">
                                     <img
-                                        src={pkg.img}
+                                        src={pkg.image}
                                         alt={pkg.title}
                                         className="w-full h-56 object-cover"
                                     />
@@ -159,20 +154,16 @@ export default function TourPackages() {
 
                                 <div className="p-6">
                                 <p className="text-[#1A2E48] font-medium">{pkg.country}</p>
-                                    <h3 className="font-serif text-2xl text-gray-800 mt-1 line-clamp-1">
+                                    {/* <h3 className="font-serif text-2xl text-gray-800 mt-1 line-clamp-1">
                                         {pkg.title}
-                                    </h3>
+                                    </h3> */}
 
                                  
                                     <p className="text-gray-500 text-sm mt-3 line-clamp-4">
                                         {pkg.description}
                                     </p>
 
-                                    <div className="mt-5 flex items-center justify-between">
-                                      
-                                        
-                                      
-                                    </div>
+                                    
                                 </div>
                             </article>
                       

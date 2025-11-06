@@ -11,15 +11,20 @@ export default function HeroSection() {
                 <section className='sm:flex sm:justify-evenly p-5 items-center'>
                     <Form />
                     <div className=' rounded-3xl shadow-2xl  md:p-10  backdrop-blur-xm border border-gray-100 mx-auto max-w-xl bg-[#1A2E48] text-white  p-5 text-xl'>
-                        <h2 className='font-semibold'>  Most Incredible Flights in just a click!</h2>
+                        <h2 className='font-semibold'>  Your Trusted Partner for USA & International Flight Bookings
+                        </h2>
                         <ul className='space-y-1  mt-2 list-disc  p-4 text-lg'>
-                            <li> Compare and weigh up all the available best flights leaving for your destinations</li>
+                            <li> Compare fares, choose top-rated airlines, and book your flight in minutes.
+                            </li>
 
-                            <li> Get unbelievable cheap fares on your flight deals</li>
+                            <li> AirTravelBooking.com makes travel simple, secure, and affordable.
+                            </li>
 
-                            <li> No hidden charges for using our user-friendly website</li>
+                            <li>
+                                Enjoy 24/7 customer support for hassle-free flight assistance anytime, anywhere.
+                            </li>
 
-                            <li>  Safest and fastest way to get flight bookings</li>
+                            <li> Unlock exclusive deals and last-minute offers for both domestic and international routes.</li>
                         </ul>
 
                         *From our partners
