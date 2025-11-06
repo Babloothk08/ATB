@@ -52,16 +52,17 @@ export default function Footer() {
                     <ul className="space-y-3 text-sm">
                         <li className="flex items-start gap-3">
                             <Phone className="w-5 h-5 text-blue-400 mt-0.5" />
-                            +1 (877) 527-7118
+                            844-821-5950
                         </li>
                         <li className="flex items-start gap-3">
                             <Mail className="w-5 h-5 text-blue-400 mt-0.5" />
-                            support@airtravelsbuddy.com
+                            ticketbookingairlines@gmail.com
                         </li>
-                        {/* <li className="flex items-start gap-3">
+                        <li className="flex items-start gap-3">
                             <MapPin className="w-5 h-5 text-blue-400 mt-0.5" />
-                            123 Aviation Street, San Francisco, CA 94102
-                        </li> */}
+                            Office Address: 820 South Riverside Drive #1090
+                            IOWA CITY, IA 52246
+                        </li>
                     </ul>
                 </div>
 

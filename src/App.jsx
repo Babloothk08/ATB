@@ -17,7 +17,7 @@ export default function App() {
               <a href="/">  <img className='h-16' src="https://i.postimg.cc/TP6w89Pc/ATB-LOGO-PNG.png" alt="" /> </a>
             </div>
             <div className={"flex items-center gap-2 text-xl md:text-2xl font-bold transition-colors"}>
-              <Phone className='h-8 w-8 text-black animate-wiggle animate-pulse' />    +1-(877) 527-7118
+              <Phone className='h-8 w-8 text-black animate-wiggle animate-pulse' /> 844-821-5950
             </div>
             <div className={"invisible items-center gap-2 text-xl md:text-2xl font-bold transition-colors"}>
 

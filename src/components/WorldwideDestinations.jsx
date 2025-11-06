@@ -17,7 +17,7 @@ export default function WorldwideDestinations() {
             img: "https://i.postimg.cc/028Y4nqV/Worldwide-Destinations-berlin.jpg",
         },
         {
-            name: "San Francisco. ",
+            name: "San Francisco",
             img: "https://i.postimg.cc/GhcFfK1N/Worldwide-Destinations-san-fransisco.jpg",
         },
         {
@@ -65,7 +65,7 @@ export default function WorldwideDestinations() {
                     ))}
                 </div>
 
-                <a href="tel:+"> <button className="bg-teal-700 text-white px-8 py-3 rounded-md font-semibold shadow hover:bg-teal-800 transition-all animate-bounce">
+                <a href="tel:+844-821-5950"> <button className="bg-teal-700 text-white px-8 py-3 rounded-md font-semibold shadow hover:bg-teal-800 transition-all animate-bounce">
                     Call Us 
                 </button></a>
             </div>
