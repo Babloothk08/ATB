@@ -6,6 +6,7 @@ import WorldwideDestinations from './components/WorldwideDestinations'
 import TourPackages from './components/TourPackages'
 import SocialsSection from './components/SocialsSection'
 import Footer from './components/Footer'
+import ATBFAQ from './components/ATBFAQ'
 
 export default function App() {
   return (
@@ -41,6 +42,9 @@ export default function App() {
       </section>
       <section>
         <SocialsSection/>
+      </section>
+      <section>
+        <ATBFAQ/>
       </section>
       <Footer/>
     </>
