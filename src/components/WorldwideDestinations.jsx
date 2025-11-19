@@ -5,7 +5,8 @@ import {
     CreditCard,
     Undo2,
 } from "lucide-react";
-
+import { motion } from "framer-motion";
+import { Plane } from "lucide-react";
 export default function WorldwideDestinations() {
     const destinations = [
         {
@@ -42,76 +43,156 @@ export default function WorldwideDestinations() {
     ];
 
     return (
-        <section className="bg-gray-50">
-            {/* Worldwide Destinations */}
-            <div className="py-16 text-center">
-                <h2 className="text-3xl font-bold text-gray-900 mb-3"> Top Flight Routes from the USA to Europe & Canada</h2>
-                <p className="text-gray-600 max-w-2xl mx-auto mb-10">
-                    Discover the most popular air routes at unbeatable prices. Fly from major U.S. cities to top European and Canadian destinations without overspending.
-                </p>
+        <section className="relative overflow-hidden">
 
+            {/* ✨ Parallax Gradient Background */}
+            <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-teal-400/10 to-indigo-700/10"
+                animate={{ backgroundPosition: ["0% 0%", "100% 100%"] }}
+                style={{ backgroundSize: "200% 200%" }}
+                transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+            />
+
+            {/* 🛩 Floating Airplane Icons */}
+            <motion.div
+                className="absolute left-10 top-20 opacity-25"
+                animate={{ y: [0, -20, 0], rotate: [0, 4, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            >
+                <Plane size={60} />
+            </motion.div>
+
+            <motion.div
+                className="absolute right-12 bottom-24 opacity-20"
+                animate={{ y: [0, 20, 0], rotate: [0, -4, 0] }}
+                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+            >
+                <Plane size={45} />
+            </motion.div>
+
+            {/* 🌍 WORLDWIDE DESTINATIONS */}
+            <div className="py-20 text-center relative z-10">
+                <motion.h2
+                    className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                >
+                    Top Flight Routes from the USA to Europe & Canada
+                </motion.h2>
+
+                <motion.p
+                    className="text-gray-600 max-w-2xl mx-auto mb-10"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    Discover the most popular air routes at unbeatable prices. Fly from major U.S. cities to top European and Canadian destinations without overspending.
+                </motion.p>
+
+                {/* Destination Bubbles */}
                 <div className="flex flex-wrap justify-center gap-8 mb-10 px-6">
                     {destinations.map((city, i) => (
-                        <div key={i} className="text-center">
-                            <div className="w-28 h-28 rounded-full overflow-hidden shadow-md border-4 border-white mx-auto mb-3 hover:scale-105 transition-all">
+                        <motion.div
+                            key={i}
+                            className="text-center"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                        >
+                            <motion.div
+                                className="w-28 h-28 rounded-full overflow-hidden shadow-md border-4 border-white mx-auto mb-3"
+                                whileHover={{ scale: 1.08, rotate: 2 }}
+                                transition={{ type: "spring", stiffness: 200 }}
+                            >
                                 <img
                                     src={city.img}
                                     alt={city.name}
-                                    className="w-full h-full object-contain"
+                                    className="w-full h-full object-cover"
                                 />
-                            </div>
+                            </motion.div>
                             <p className="font-semibold text-gray-800">{city.name}</p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
 
-                <a href="tel:+1-844-821-5950"> <button className="bg-teal-700 text-white px-8 py-3 rounded-md font-semibold shadow hover:bg-teal-800 transition-all animate-bounce">
-                    Call Us 
-                </button></a>
+                {/* Call Button */}
+                <motion.a href="tel:+1-844-821-5950">
+                    <motion.button
+                        whileHover={{ scale: 1.08 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="bg-teal-700 text-white px-10 py-3 rounded-full font-semibold shadow-lg hover:bg-teal-800 transition-all"
+                    >
+                        Call Us
+                    </motion.button>
+                </motion.a>
             </div>
 
-            {/* Choosing Fareslist Section */}
-            <div className="bg-white py-20 px-6 md:px-16 lg:px-24">
+            {/* ✈ Choosing Air Travel Booking Section */}
+            <div className="bg-white relative z-10 py-20 px-6 md:px-16 lg:px-24">
                 <div className="grid md:grid-cols-2 gap-10 items-center">
-                    {/* Left Side Text */}
-                    <div>
-                        <p className="italic text-gray-700 mb-2">Choosing Air Travel Booking</p>
-                        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900">
-                            Your Path to Affordable Flights & Dream Vacations
 
-                        </h2>
-                        <p className="text-gray-600 mb-8 leading-relaxed">
-                            Finding great flight deals has never been this easy! With Air Travel Booking, you can explore worldwide destinations and book flights at unbeatable prices in just a few clicks. Whether you’re flying across the USA or to Europe and Canada, enjoy the lowest fares, flexible booking options, and trusted service—all in one place.
-
+                    {/* LEFT CONTENT */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.7 }}
+                    >
+                        <p className="italic text-gray-700 mb-2">
+                            Choosing Air Travel Booking
                         </p>
 
-                        {/* Benefits grid */}
+                        <h2 className="text-3xl md:text-4xl font-extrabold mb-4 text-gray-900">
+                            Your Path to Affordable Flights & Dream Vacations
+                        </h2>
+
+                        <p className="text-gray-600 mb-8 leading-relaxed">
+                            Finding great flight deals has never been this easy! With Air Travel Booking, you can explore worldwide destinations and book flights at unbeatable prices in just a few clicks. Whether you’re flying across the USA or to Europe and Canada, enjoy the lowest fares, flexible booking options, and trusted service—all in one place.
+                        </p>
+
+                        {/* BENEFITS GRID */}
                         <div className="grid sm:grid-cols-2 gap-4">
                             {benefits.map((b, i) => (
-                                <div
+                                <motion.div
                                     key={i}
-                                    className="flex items-center gap-3 border border-gray-200 rounded-lg px-4 py-3 bg-gray-50 hover:shadow-md transition-all"
+                                    className="flex items-center gap-3 border border-gray-200 rounded-lg px-4 py-3 bg-gray-50 hover:shadow-lg transition-all"
+                                    whileHover={{
+                                        scale: 1.03,
+                                        backgroundColor: "rgba(0,0,0,0.03)",
+                                    }}
+                                    transition={{ type: "spring", stiffness: 200 }}
                                 >
                                     {b.icon}
                                     <span className="font-medium text-gray-800">{b.text}</span>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
 
-                    {/* Right Side Images */}
-                    <div className="flex flex-col gap-6">
-                        <img
+                    {/* RIGHT IMAGES */}
+                    <motion.div
+                        className="flex flex-col gap-6"
+                        initial={{ opacity: 0, x: 40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.7 }}
+                    >
+                        <motion.img
                             src="https://i.postimg.cc/xdchzHjk/Your-Path-to-the-Best-Flight-Deals-1.jpg"
                             alt="Airport Traveler"
-                            className="rounded-br-4xl object-contain w-full h-64 md:h-72"
+                            className="rounded-br-4xl object-cover w-full h-64 md:h-72 shadow-lg"
+                            whileHover={{ scale: 1.03 }}
+                            transition={{ duration: 0.4 }}
                         />
-                        <img
+
+                        <motion.img
                             src="https://i.postimg.cc/VNdpCMsN/Your-Path-to-the-Best-Flight-Deals-2.jpg"
                             alt="Airplane in Sky"
-                            className="rounded-br-4xl object-contain w-full h-64 md:h-72"
+                            className="rounded-br-4xl object-cover w-full h-64 md:h-72 shadow-lg"
+                            whileHover={{ scale: 1.03 }}
+                            transition={{ duration: 0.4 }}
                         />
-                    </div>
+                    </motion.div>
+
                 </div>
             </div>
         </section>
