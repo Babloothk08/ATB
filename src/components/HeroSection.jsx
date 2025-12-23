@@ -17,7 +17,7 @@ export default function HeroSection() {
                             <li> Compare fares, choose top-rated airlines, and book your flight in minutes.
                             </li>
 
-                            <li> AirTravelBooking.com makes travel simple, secure, and affordable.
+                            <li> Airlinesticketbooking.com makes travel simple, secure, and affordable.
                             </li>
 
                             <li>
