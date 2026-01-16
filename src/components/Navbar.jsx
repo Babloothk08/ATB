@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Menu, X, Plane, Globe, Users, Briefcase, Bookmark } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Define your navigation links
 const navLinks = [
@@ -23,43 +24,43 @@ export default function Navbar() {
 
                     {/* 1. Logo */}
                     <div className="flex items-center">
-                        <a href="/" className="flex items-center gap-2">
+                        <Link to="/" className="flex items-center gap-2">
                             {/* Assuming the logo URL is correct and h-12 is a good size */}
                             <img
                                 className='h-12 md:h-14'
                                 src="https://i.postimg.cc/TP6w89Pc/ATB-LOGO-PNG.png"
                                 alt="Airlines Ticket Booking Logo"
                             />
-                        </a>
+                        </Link>
                     </div>
 
                     {/* 2. Primary Navigation (Desktop) */}
-                    {/* <nav className="hidden lg:flex space-x-6 xl:space-x-8 items-center">
+                    <nav className="hidden lg:flex space-x-6 xl:space-x-8 items-center">
                         {navLinks.map((link) => (
-                            <a
+                            <Link
                                 key={link.name}
-                                href={link.href}
+                                to={link.href}
                                 className="text-gray-700 font-medium text-base hover:text-teal-600 transition-colors relative group"
                             >
                                 {link.name}
                                 
                                 <span className="absolute left-0 bottom-[-5px] w-0 h-0.5 bg-teal-600 transition-all duration-300 group-hover:w-full"></span>
-                            </a>
+                            </Link>
                         ))}
-                    </nav> */}
+                    </nav>
 
                     {/* 3. Call to Action & Mobile Button */}
                     <div className="flex items-center gap-4">
                         {/* Premium Call to Action (Desktop/Tablet) */}
-                        <a
-                            href="tel:+1-844-821-5950"
+                        <Link
+                            to="tel:+1-844-821-5950"
                             className="hidden sm:flex items-center gap-2 bg-teal-600 text-white font-semibold px-4 py-2 rounded-full shadow-lg transition-all duration-300 hover:bg-teal-700 hover:shadow-xl"
                             aria-label="Call for urgent booking assistance"
                         >
                             <Phone className='h-5 w-5 animate-pulse' />
                             <span className='hidden md:inline text-sm'>+1-844-821-5950</span>
                             <span className='inline md:hidden text-sm'>Call Us</span>
-                        </a>
+                        </Link>
 
                         {/* Mobile Menu Button (Tablet/Mobile) */}
                         <button
@@ -82,14 +83,14 @@ export default function Navbar() {
                     <ul className="space-y-2">
                         {navLinks.map((link) => (
                             <li key={link.name}>
-                                <a
-                                    href={link.href}
+                                <Link
+                                    to={link.href}
                                     onClick={toggleMenu} // Close menu on link click
                                     className="flex items-center gap-3 w-full p-3 text-lg font-medium text-gray-800 rounded-lg hover:bg-teal-100 hover:text-teal-700 transition-colors"
                                 >
                                     {link.icon}
                                     {link.name}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>

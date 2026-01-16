@@ -36,7 +36,7 @@ export default function AboutPage() {
                 className='pt-72 pb-24 bg-cover bg-center text-white ' 
                 style={{ backgroundImage: "url(https://i.postimg.cc/HkRLv3XR/about-banner.png)" }}
             >
-                <div className='container mx-auto px-6 text-center  rounded-xl'>
+                <div className='container mx-auto px-6 text-center rounded-xl'>
                     <motion.h1 
                         variants={itemVariants}
                         className='text-5xl font-extrabold mb-4'
