@@ -29,9 +29,9 @@ export default function App() {
         <Route path='/flights' element={<AllFlights />} />
         <Route path='/about' element={<AboutPage />} />
         <Route path="/contact-Us" element={<ContactPage />} />
-        <Route path='/terms&conditions' element={<TermsConditions />}/>
+        <Route path='/terms-conditions' element={<TermsConditions />}/>
         <Route path='/privacy-policy' element={<PrivacyPolicy />}/>
-        <Route path="/tour&packages" element={<TourPackagesPage />} />
+        <Route path="/tour-packages" element={<TourPackagesPage />} />
         <Route path="/flight-booking-services" element={<DestinationsPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path='/visa-service' element={<Visa />}/>

@@ -29,12 +29,12 @@ export default function Footer() {
                             </a>
                         </li>
                         <li>
-                            <a href="/destinations" className="hover:text-white transition-all">
-                                Destinations
+                            <a href="/flight-booking-services" className="hover:text-white transition-all">
+                                Flight Booking
                             </a>
                         </li>
                         <li>
-                            <a href="/packages" className="hover:text-white transition-all">
+                            <a href="/tour-packages" className="hover:text-white transition-all">
                                 Tour Packages
                             </a>
                         </li>
@@ -44,12 +44,12 @@ export default function Footer() {
                             </a>
                         </li>
                         <li>
-                            <a href="/terms&conditions" className="hover:text-white transition-all">
+                            <a href="/terms-conditions" className="hover:text-white transition-all">
                                 Terms and Conditions
                             </a>
                         </li>
                         <li>
-                            <a href="/contact" className="hover:text-white transition-all">
+                            <a href="/contact-us" className="hover:text-white transition-all">
                                 Contact Us
                             </a>
                         </li>
