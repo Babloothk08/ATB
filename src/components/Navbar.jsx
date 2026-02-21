@@ -11,7 +11,7 @@ const navLinks = [
   { name: "About Us", href: "/about" },
   { name: "Our Services", href: "#" },
   { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact-Us" },
+  { name: "Contact", href: "/contact-us" },
 ];
 
 // Services dropdown links

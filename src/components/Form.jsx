@@ -78,7 +78,7 @@ export default function FlightForm() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:3000/api/search-flights",
+        "https://api.airlinesticketbooking.com/api/search-flights",
         requestData
       );
       console.log("totalflights",response.data)
