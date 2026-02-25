@@ -16,7 +16,7 @@ export default function Home() {
       <SEO
         title="Affordable International Flights from USA | Airlines Ticket Booking"
         description=" Book affordable international and domestic flights from the USA with our trusted travel agency. Compare fares, reserve hotels, visa services, car rentals & travel insurance in one place."
-        canonical="https://www.airlinesticketbooking.com/"
+        canonical="https://www.airlinesticketbooking.com"
       />
       <Helmet>
         <script type="application/ld+json">
