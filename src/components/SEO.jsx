@@ -1,15 +1,19 @@
+import { Helmet } from "react-helmet";
 
-import {Helmet} from "react-helmet"
-export default function SEO({ title, description, canonical }) {
-  
+export default function SEO({ title, description, canonical, schema }) {
   const cleanCanonical = canonical?.replace(/\/+$/, "");
-  
+
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={cleanCanonical} key="canonical"/>
-    
+      {cleanCanonical && <link rel="canonical" href={cleanCanonical} />}
+
+      {schema && (
+        <script type="application/ld+json">
+          {schema}
+        </script>
+      )}
     </Helmet>
   );
 }

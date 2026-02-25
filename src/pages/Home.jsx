@@ -9,22 +9,9 @@ import Footer from "../components/Footer";
 import ATBFAQ from "../components/ATBFAQ";
 import SEO from "../components/SEO";
 import { Helmet } from "react-helmet";
-
-export default function Home() {
-  return (
-    <>
-      <SEO
-        title="Affordable International Flights from USA | Airlines Ticket Booking"
-        description=" Book affordable international and domestic flights from the USA with our trusted travel agency. Compare fares, reserve hotels, visa services, car rentals & travel insurance in one place."
-        canonical="https://www.airlinesticketbooking.com/"
-      />
-      {/* <Helmet>
-        
-        <script type="application/ld+json">
-          {`{
+const homeSchema = {
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@type": "TravelAgency",
       "@id": "https://www.airlinesticketbooking.com/#organization",
@@ -68,7 +55,6 @@ export default function Home() {
         "https://www.youtube.com/@airlinesticketbooking1"
       ]
     },
-
     {
       "@type": "WebSite",
       "@id": "https://www.airlinesticketbooking.com/#website",
@@ -83,7 +69,6 @@ export default function Home() {
         "query-input": "required name=search_term_string"
       }
     },
-
     {
       "@type": "WebPage",
       "@id": "https://www.airlinesticketbooking.com/#webpage",
@@ -101,7 +86,6 @@ export default function Home() {
       },
       "inLanguage": "en-US"
     },
-
     {
       "@type": "BreadcrumbList",
       "@id": "https://www.airlinesticketbooking.com/#breadcrumb",
@@ -114,12 +98,22 @@ export default function Home() {
         }
       ]
     }
-
   ]
-}
-  `}
-        </script>
-      </Helmet> */}
+};
+
+export default function Home() {
+  return (
+    <>
+      <SEO
+        title="Affordable International Flights from USA | Airlines Ticket Booking"
+        description=" Book affordable international and domestic flights from the USA with our trusted travel agency. Compare fares, reserve hotels, visa services, car rentals & travel insurance in one place."
+        canonical="https://www.airlinesticketbooking.com/"
+
+        schema={JSON.stringify(homeSchema)}
+      />
+      
+        
+      
       <section>
         <HeroSection />
       </section>

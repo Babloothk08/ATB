@@ -10,6 +10,80 @@ import {
 } from "lucide-react";
 import SEO from "../components/SEO";
 
+const flightSchema = {
+    "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Service",
+      "@id": "https://www.airlinesticketbooking.com/flight-booking-services#service",
+      "name": "Flight Booking Services",
+      "description": "Professional flight booking services from the USA offering affordable domestic and international airline ticket reservations, competitive airfare deals, personalized support and secure online booking.",
+      "serviceType": [
+        "Domestic Flight Booking",
+        "International Flight Booking",
+        "Cheap Flight Deals",
+        "Last Minute Flight Booking",
+        "Multi-City Flight Booking"
+      ],
+      "provider": {
+        "@id": "https://www.airlinesticketbooking.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.airlinesticketbooking.com/flight-booking-services",
+        "availableLanguage": ["English"]
+      }
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://www.airlinesticketbooking.com/flight-booking-services#webpage",
+      "url": "https://www.airlinesticketbooking.com/flight-booking-services",
+      "name": "Flight Booking Services from USA | Airline Ticket Booking",
+      "description": "Book affordable domestic & international flights from the USA. Explore flight booking services, compare fares and get expert support from a trusted travel agency.",
+      "isPartOf": {
+        "@id": "https://www.airlinesticketbooking.com/#website"
+      },
+      "about": {
+        "@id": "https://www.airlinesticketbooking.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://www.airlinesticketbooking.com/flight-booking-services#service"
+      },
+      "breadcrumb": {
+        "@id": "https://www.airlinesticketbooking.com/flight-booking-services#breadcrumb"
+      },
+      "inLanguage": "en-US"
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.airlinesticketbooking.com/flight-booking-services#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.airlinesticketbooking.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Flight Booking Services",
+          "item": "https://www.airlinesticketbooking.com/flight-booking-services"
+        }
+      ]
+    }
+
+  ]
+}
+
+
 // Consolidated Destination Data
 const allDestinations = {
   USA: [
@@ -111,6 +185,7 @@ export default function DestinationsPage() {
       title='Book affordable Flights from USA | Airlines Ticket Booking'
       description='Search and book affordable domestic and international flights from the USA. Compare airline fares, get exclusive flight deals and reserve tickets easily online.'
       canonical='https://www.airlinesticketbooking.com/flight-booking-services'
+      schema={JSON.stringify(flightSchema)}
       />
       <div className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-6 max-w-7xl">

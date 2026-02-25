@@ -85,12 +85,87 @@ export default function TourPackagesPage() {
     }
   };
 
+  const tourPackageSchema = {
+     "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Service",
+      "@id": "https://www.airlinesticketbooking.com/tour-packages#service",
+      "name": "Tour Packages from USA",
+      "description": "Explore affordable domestic and international tour packages, custom vacation deals, family holiday trips, and exclusive itinerary planning from a trusted USA travel agency.",
+      "serviceType": [
+        "International Tour Packages",
+        "Domestic Tour Packages",
+        "Custom Vacation Packages",
+        "Family Holiday Packages",
+        "Group & Solo Travel Packages"
+      ],
+      "provider": {
+        "@id": "https://www.airlinesticketbooking.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.airlinesticketbooking.com/tour-packages",
+        "availableLanguage": ["English"]
+      }
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://www.airlinesticketbooking.com/tour-packages#webpage",
+      "url": "https://www.airlinesticketbooking.com/tour-packages",
+      "name": "Tour Packages from USA | Affordable Vacation Deals",
+      "description": "Discover affordable domestic and international tour packages, customizable vacation deals, and expert travel planning from a trusted USA travel agency. Compare popular itineraries and book your next adventure.",
+      "isPartOf": {
+        "@id": "https://www.airlinesticketbooking.com/#website"
+      },
+      "about": {
+        "@id": "https://www.airlinesticketbooking.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://www.airlinesticketbooking.com/tour-packages#service"
+      },
+      "breadcrumb": {
+        "@id": "https://www.airlinesticketbooking.com/tour-packages#breadcrumb"
+      },
+      "inLanguage": "en-US"
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.airlinesticketbooking.com/tour-packages#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.airlinesticketbooking.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tour Packages",
+          "item": "https://www.airlinesticketbooking.com/tour-packages"
+        }
+      ]
+    }
+
+  ]
+
+  }
+
   return (
     <>
       <SEO
         title="International Travel Packages from USA | Holiday Deals"
         description="Discover affordable holiday and tour packages from the USA with Airlines ticket booking . All-inclusive deals on flights, hotels, car rentals and guided tours for top destinations."
         canonical="https://www.airlinesticketbooking.com/tour-packages"
+        schema={JSON.stringify(tourPackageSchema)}
       />
       <div className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-6 max-w-7xl">
