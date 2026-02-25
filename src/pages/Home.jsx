@@ -19,6 +19,7 @@ export default function Home() {
         canonical="https://www.airlinesticketbooking.com"
       />
       <Helmet>
+        
         <script type="application/ld+json">
           {`{
   "@context": "https://schema.org",
