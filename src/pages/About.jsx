@@ -48,7 +48,7 @@ export default function AboutPage() {
         description="Explore Airlines ticket booking travel blog for flight booking tips, airline fare insights, visa guidance, travel insurance advice and budget travel ideas."
         canonical="https://www.airlinesticketbooking.com/about"
       />
-      <Helmet>
+      {/* <Helmet>
         <script type="application/ld+json">
           {`{
   "@context": "https://schema.org",
@@ -98,7 +98,7 @@ export default function AboutPage() {
 }
   `}
         </script>
-      </Helmet>
+      </Helmet> */}
 
       <motion.div initial="hidden" animate="show" variants={containerVariants}>
         {/* 1. Hero Section: Company Identity */}

@@ -18,7 +18,7 @@ export default function Home() {
         description=" Book affordable international and domestic flights from the USA with our trusted travel agency. Compare fares, reserve hotels, visa services, car rentals & travel insurance in one place."
         canonical="https://www.airlinesticketbooking.com/"
       />
-      <Helmet>
+      {/* <Helmet>
         
         <script type="application/ld+json">
           {`{
@@ -119,7 +119,7 @@ export default function Home() {
 }
   `}
         </script>
-      </Helmet>
+      </Helmet> */}
       <section>
         <HeroSection />
       </section>
