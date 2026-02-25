@@ -1,9 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-10">
+    <>
+      <SEO 
+      title='Privacy Policy | Airlines Ticket Booking'
+      description='Read the Privacy Policy for Airlines Ticket Booking to understand how we collect, protect and use your personal and travel booking information.'
+      canonical='https://www.airlinesticketbooking.com/privacy-policy'
+      />
+      <div className="max-w-5xl mx-auto px-4 py-10">
       
       
       <div className="mb-6 text-sm">
@@ -136,6 +143,7 @@ export default function PrivacyPolicy() {
       </Section>
 
     </div>
+    </>
   );
 }
 

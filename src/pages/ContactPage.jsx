@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const fadeUp = {
     hidden: { opacity: 0, y: 20 },
@@ -16,7 +17,13 @@ export default function ContactPage() {
     ];
 
     return (
-        <motion.div
+        <>
+            <SEO 
+                title='Contact us | Airlines Ticket Booking'
+                description='Get in touch with our US travel agency experts for flight bookings, hotel deals, visa assistance, travel insurance and support with your travel plans.'
+                canonical='https://www.airlinesticketbooking.com/contact-us'
+            />
+            <motion.div
             initial="hidden"
             animate="show"
             className="py-24 md:py-32 bg-gray-50"
@@ -124,5 +131,6 @@ export default function ContactPage() {
                 </div>
             </div>
         </motion.div>
+        </>
     );
 }

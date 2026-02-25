@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 // Main nav links
 const navLinks = [
   { name: "Home", href: "/" },
+   { name: "About Us", href: "/about" },
   { name: "Flight Booking", href: "/flight-booking-services" },
   { name: "Hotel Booking", href: "/hotel-booking-services" },
   { name: "Tour Packages", href: "/tour-packages" },
-  { name: "About Us", href: "/about" },
   { name: "Our Services", href: "#" },
   { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact-us" },
