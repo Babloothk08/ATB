@@ -136,7 +136,7 @@ export default function CarRental() {
         />
 
         <script type="application/ld+json">
-          {{
+          {`{
   "@context": "https://schema.org",
   "@graph": [
 
@@ -207,7 +207,7 @@ export default function CarRental() {
     }
 
   ]
-} }
+}` }
         </script>
       </Helmet>
 

@@ -147,10 +147,7 @@ export default function AboutPage() {
 }
   `}
         </script>
-      </Helmet>
-      
-        
-      
+      </Helmet>     
 
       <motion.div initial="hidden" animate="show" variants={containerVariants}>
         {/* 1. Hero Section: Company Identity */}

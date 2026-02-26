@@ -171,15 +171,20 @@ export default function TourPackagesPage() {
       <Helmet>
         <title>International Travel Packages from USA | Holiday Deals</title>
 
-        <meta name="description" content="Discover affordable holiday and tour packages from the USA with Airlines ticket booking . All-inclusive deals on flights, hotels, car rentals and guided tours for top destinations." />
+        <meta
+          name="description"
+          content="Discover affordable holiday and tour packages from the USA with Airlines ticket booking . All-inclusive deals on flights, hotels, car rentals and guided tours for top destinations."
+        />
 
-        <link rel="canonical" href="https://www.airlinesticketbooking.com/tour-packages" />
+        <link
+          rel="canonical"
+          href="https://www.airlinesticketbooking.com/tour-packages"
+        />
 
         <script type="application/ld+json">
-{ `{
+          {`{
   "@context": "https://schema.org",
   "@graph": [
-
     {
       "@type": "Service",
       "@id": "https://www.airlinesticketbooking.com/tour-packages#service",
@@ -249,9 +254,7 @@ export default function TourPackagesPage() {
   ]
 }
   `}
-</script>
-
-
+        </script>
       </Helmet>
       <div className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-6 max-w-7xl">
