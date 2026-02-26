@@ -75,7 +75,7 @@ export default function ContactPage() {
                         transition={{ delay: 0.3 }}
                         className="lg:col-span-2 bg-white p-8 md:p-12 rounded-xl shadow-2xl"
                     >
-                        <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message.</h2>
                         <form className="space-y-6">
                             <div className="grid sm:grid-cols-2 gap-6">
                                 <div>
