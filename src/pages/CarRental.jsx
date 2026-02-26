@@ -125,90 +125,85 @@ export default function CarRental() {
         canonical="https://www.airlinesticketbooking.com/car-rental-services"
       /> */}
       <Helmet>
-        
-                <title>Car Rental Services in USA | Airlines ticket booking</title>
-                <meta name="description" content="Book affordable car rental services across the USA with flexible options and airport pickup from Airlines ticket booking  . Compare rates and reserve your ride easily online." />
-                <link rel="canonical" href="https://www.airlinesticketbooking.com/car-rental-services" />
-        
-                <script type="application/ld+json">
-{ `{
-  "@context": "https://schema.org",
-  "@graph": [
+  <title>Car Rental Services in USA | Airlines Ticket Booking</title>
 
-    {
-      "@type": "Service",
-      "@id": "https://www.airlinesticketbooking.com/car-rental-services#service",
-      "name": "Car Rental Services in USA",
-      "description": "Affordable and flexible car rental services in the USA providing airport pickup, budget and luxury vehicles, short-term and long-term rental options with easy online reservations and personalized support.",
-      "serviceType": [
-        "Car Rental Services",
-        "Airport Car Rental",
-        "Economy Car Rental",
-        "Luxury Car Rental",
-        "Long-Term Car Rental"
-      ],
-      "provider": {
-        "@id": "https://www.airlinesticketbooking.com/#organization"
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "United States"
-      },
-      "availableChannel": {
-        "@type": "ServiceChannel",
-        "serviceUrl": "https://www.airlinesticketbooking.com/car-rental-services",
-        "availableLanguage": ["English"]
-      }
-    },
+  <meta
+    name="description"
+    content="Book affordable car rental services across the USA with flexible options and airport pickup from Airlines Ticket Booking. Compare rates and reserve your ride easily online."
+  />
 
-    {
-      "@type": "WebPage",
-      "@id": "https://www.airlinesticketbooking.com/car-rental-services#webpage",
-      "url": "https://www.airlinesticketbooking.com/car-rental-services",
-      "name": "Car Rental Services in USA | Affordable Car Hire",
-      "description": "Book affordable car rental services across the USA. Choose from economy, luxury, and long-term car options with flexible rental terms and expert travel support.",
-      "isPartOf": {
-        "@id": "https://www.airlinesticketbooking.com/#website"
-      },
-      "about": {
-        "@id": "https://www.airlinesticketbooking.com/#organization"
-      },
-      "mainEntity": {
-        "@id": "https://www.airlinesticketbooking.com/car-rental-services#service"
-      },
-      "breadcrumb": {
-        "@id": "https://www.airlinesticketbooking.com/car-rental-services#breadcrumb"
-      },
-      "inLanguage": "en-US"
-    },
+  <link
+    rel="canonical"
+    href="https://www.airlinesticketbooking.com/car-rental-services"
+  />
 
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.airlinesticketbooking.com/car-rental-services#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.airlinesticketbooking.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Car Rental Services",
-          "item": "https://www.airlinesticketbooking.com/car-rental-services"
-        }
-      ]
-    }
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Service",
+            "@id":
+              "https://www.airlinesticketbooking.com/car-rental-services#service",
+            name: "Car Rental Services in USA",
+            description:
+              "Affordable and flexible car rental services in the USA providing airport pickup, budget and luxury vehicles, short-term and long-term rental options with easy online reservations and personalized support.",
+            serviceType: [
+              "Car Rental Services",
+              "Airport Car Rental",
+              "Economy Car Rental",
+              "Luxury Car Rental",
+              "Long-Term Car Rental",
+            ],
+            areaServed: {
+              "@type": "Country",
+              name: "United States",
+            },
+            availableChannel: {
+              "@type": "ServiceChannel",
+              serviceUrl:
+                "https://www.airlinesticketbooking.com/car-rental-services",
+              availableLanguage: ["English"],
+            },
+          },
+          {
+            "@type": "WebPage",
+            "@id":
+              "https://www.airlinesticketbooking.com/car-rental-services#webpage",
+            url: "https://www.airlinesticketbooking.com/car-rental-services",
+            name: "Car Rental Services in USA",
+            description:
+              "Book affordable car rental services across the USA with flexible rental terms and expert travel support.",
+            inLanguage: "en-US",
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id":
+              "https://www.airlinesticketbooking.com/car-rental-services#breadcrumb",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.airlinesticketbooking.com/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Car Rental Services",
+                item:
+                  "https://www.airlinesticketbooking.com/car-rental-services",
+              },
+            ],
+          },
+        ],
+      }),
+    }}
+  />
+</Helmet>
 
-  ]
-} `}
-</script>
-
-
-              
-      </Helmet>
-      
       <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div
@@ -594,7 +589,6 @@ export default function CarRental() {
             ))}
           </div>
 
-          
           {/* <div className="text-center mt-10">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-xl hover:bg-blue-700 transition">
               View All Reviews
@@ -604,23 +598,22 @@ export default function CarRental() {
       </section>
 
       <section className="py-10 px-6 text-center bg-gray-50">
-  <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-    Book Your Car Rental Today
-  </h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+          Book Your Car Rental Today
+        </h2>
 
-  <p className="text-lg mb-8 max-w-2xl mx-auto text-gray-600">
-    Reserve your vehicle now and enjoy a smooth, comfortable travel experience 
-    anywhere in the United States.
-  </p>
+        <p className="text-lg mb-8 max-w-2xl mx-auto text-gray-600">
+          Reserve your vehicle now and enjoy a smooth, comfortable travel
+          experience anywhere in the United States.
+        </p>
 
-  <a
-    href="tel:+1-844-821-5950"
-    className="inline-block bg-teal-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-teal-700 transition duration-300 shadow-lg"
-  >
-    Call Now
-  </a>
-</section>
-      
+        <a
+          href="tel:+1-844-821-5950"
+          className="inline-block bg-teal-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-teal-700 transition duration-300 shadow-lg"
+        >
+          Call Now
+        </a>
+      </section>
     </>
   );
 }
