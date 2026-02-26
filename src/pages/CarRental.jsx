@@ -76,13 +76,13 @@ export default function CarRental() {
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Car Rental Services in USA</title>
         <meta
           name="description"
           content="Book affordable car rental services across the USA."
         />
-      </Helmet>
+      </Helmet> */}
 
       {/* HERO SECTION */}
       <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
