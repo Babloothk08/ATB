@@ -3,7 +3,7 @@ import { ArrowRight, Search } from "lucide-react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import airports from "../../data/airports.json";
-import SEO from "./SEO";
+
 
 export default function FlightForm() {
   const navigate = useNavigate();

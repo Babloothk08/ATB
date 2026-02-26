@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import SEO from '../components/SEO';
+import { Helmet } from 'react-helmet';
 
 const fadeUp = {
     hidden: { opacity: 0, y: 20 },
@@ -18,11 +19,16 @@ export default function ContactPage() {
 
     return (
         <>
-            <SEO 
+            {/* <SEO 
                 title='Contact us | Airlines Ticket Booking'
                 description='Get in touch with our US travel agency experts for flight bookings, hotel deals, visa assistance, travel insurance and support with your travel plans.'
                 canonical='https://www.airlinesticketbooking.com/contact-us'
-            />
+            /> */}
+            <Helmet>
+                <title>Contact us | Airlines Ticket Booking</title>
+                <meta name='description' content='Get in touch with our US travel agency experts for flight bookings, hotel deals, visa assistance, travel insurance and support with your travel plans.' />
+                <link rel="canonical" href="https://www.airlinesticketbooking.com/contact-us" />
+            </Helmet>
             <motion.div
             initial="hidden"
             animate="show"

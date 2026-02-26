@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Wifi, Utensils, Dumbbell, Car, Waves, Coffee, Tv } from "lucide-react";
 import SEO from "../components/SEO";
+import { Helmet } from "react-helmet";
 export default function HotelBooking() {
   const [rooms, setRooms] = useState(1);
   const [adults, setAdults] = useState(2);
@@ -138,8 +139,95 @@ export default function HotelBooking() {
     },
   ];
 
-  const hotelSchema = {
-    "@context": "https://schema.org",
+  // const hotelSchema = {
+  //   "@context": "https://schema.org",
+  // "@graph": [
+
+  //   {
+  //     "@type": "Service",
+  //     "@id": "https://www.airlinesticketbooking.com/hotel-booking-services#service",
+  //     "name": "Hotel Booking Services",
+  //     "description": "Reliable hotel booking services for both domestic and international travel. Compare hotel deals, find affordable rooms, and reserve accommodations online with expert support from a trusted USA travel agency.",
+  //     "serviceType": [
+  //       "Hotel Booking",
+  //       "International Hotel Reservations",
+  //       "Domestic Hotel Reservations",
+  //       "Affordable Hotel Deals",
+  //       "Hotel Price Comparison"
+  //     ],
+  //     "provider": {
+  //       "@id": "https://www.airlinesticketbooking.com/#organization"
+  //     },
+  //     "areaServed": {
+  //       "@type": "Country",
+  //       "name": "United States"
+  //     },
+  //     "availableChannel": {
+  //       "@type": "ServiceChannel",
+  //       "serviceUrl": "https://www.airlinesticketbooking.com/hotel-booking-services",
+  //       "availableLanguage": ["English"]
+  //     }
+  //   },
+
+  //   {
+  //     "@type": "WebPage",
+  //     "@id": "https://www.airlinesticketbooking.com/hotel-booking-services#webpage",
+  //     "url": "https://www.airlinesticketbooking.com/hotel-booking-services",
+  //     "name": "Hotel Booking Services | Affordable Hotel Reservations",
+  //     "description": "Book affordable hotels for domestic and international travel with our trusted USA travel agency. Compare prices, find great deals on rooms, and reserve hotel stays easily online.",
+  //     "isPartOf": {
+  //       "@id": "https://www.airlinesticketbooking.com/#website"
+  //     },
+  //     "about": {
+  //       "@id": "https://www.airlinesticketbooking.com/#organization"
+  //     },
+  //     "mainEntity": {
+  //       "@id": "https://www.airlinesticketbooking.com/hotel-booking-services#service"
+  //     },
+  //     "breadcrumb": {
+  //       "@id": "https://www.airlinesticketbooking.com/hotel-booking-services#breadcrumb"
+  //     },
+  //     "inLanguage": "en-US"
+  //   },
+
+  //   {
+  //     "@type": "BreadcrumbList",
+  //     "@id": "https://www.airlinesticketbooking.com/hotel-booking-services#breadcrumb",
+  //     "itemListElement": [
+  //       {
+  //         "@type": "ListItem",
+  //         "position": 1,
+  //         "name": "Home",
+  //         "item": "https://www.airlinesticketbooking.com/"
+  //       },
+  //       {
+  //         "@type": "ListItem",
+  //         "position": 2,
+  //         "name": "Hotel Booking Services",
+  //         "item": "https://www.airlinesticketbooking.com/hotel-booking-services"
+  //       }
+  //     ]
+  //   }
+
+  // ]
+
+  // }
+
+  return (
+    <>
+      {/* <SEO
+        title="Affordable Hotel Booking for International Travel | Airline Ticket Booking"
+        description="Book affordable hotels for international and domestic travel. Compare hotel prices, find exclusive deals and reserve rooms easily with our trusted US travel agency."
+        canonical="https://www.airlinesticketbooking.com/hotel-booking-services"
+        
+      /> */}
+      <Helmet>
+        <title>Affordable Hotel Booking for International Travel | Airline Ticket Booking</title>
+        <meta name="description" content="Book affordable hotels for international and domestic travel. Compare hotel prices, find exclusive deals and reserve rooms easily with our trusted US travel agency." />
+        <link rel="canonical" href="https://www.airlinesticketbooking.com/hotel-booking-services" />
+        <script type="application/ld+json">
+{ `{
+  "@context": "https://schema.org",
   "@graph": [
 
     {
@@ -209,17 +297,12 @@ export default function HotelBooking() {
     }
 
   ]
+} 
+  `}
+</script>
 
-  }
 
-  return (
-    <>
-      <SEO
-        title="Affordable Hotel Booking for International Travel | Airline Ticket Booking"
-        description="Book affordable hotels for international and domestic travel. Compare hotel prices, find exclusive deals and reserve rooms easily with our trusted US travel agency."
-        canonical="https://www.airlinesticketbooking.com/hotel-booking-services"
-        schema={JSON.stringify(hotelSchema)}
-      />
+      </Helmet>
       <section className="relative w-full h-screen flex items-center justify-center py-10">
         <div
           className="absolute inset-0 bg-cover bg-center"

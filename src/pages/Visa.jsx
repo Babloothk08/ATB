@@ -2,6 +2,7 @@ import React from "react";
 import "../../public/CSS/style.css";
 import { FileCheck, ShieldCheck, Globe2 } from "lucide-react";
 import SEO from "../components/SEO";
+import { Helmet } from "react-helmet";
 const visaResults = [
   {
     country: "UAE",
@@ -118,11 +119,92 @@ const testimonials = [
 export default function Visa() {
   return (
     <>
-      <SEO
+      {/* <SEO
         title="Travel Visa Assistance Services | Airlines Ticket Booking"
         description="Get professional travel visa assistance for tourist, business and multi-entry visas. Fast, reliable support for US and international visa applications."
         canonical="https://www.airlinesticketbooking.com/visa-service"
-      />
+      /> */}
+      <Helmet>
+        <title>Travel Visa Assistance Services | Airlines Ticket Booking</title>
+        <meta name="description" content="Get professional travel visa assistance for tourist, business and multi-entry visas. Fast, reliable support for US and international visa applications." />
+        <link rel="canonical" href="https://www.airlinesticketbooking.com/visa-service" />
+        <script type="application/ld+json">
+{ `{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Service",
+      "@id": "https://www.airlinesticketbooking.com/visa-service#service",
+      "name": "Travel Visa Assistance Services",
+      "description": "Professional travel visa assistance services to help you secure tourist, business, and other travel visas. We guide travelers from the USA through document preparation, application processing, and complete support for international visa approval.",
+      "serviceType": [
+        "Visa Assistance",
+        "Travel Visa Support",
+        "Tourist Visa Processing",
+        "Business Visa Services"
+      ],
+      "provider": {
+        "@id": "https://www.airlinesticketbooking.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.airlinesticketbooking.com/visa-service",
+        "availableLanguage": ["English"]
+      }
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://www.airlinesticketbooking.com/visa-service#webpage",
+      "url": "https://www.airlinesticketbooking.com/visa-service",
+      "name": "Visa Service | Travel Visa Assistance from USA",
+      "description": "Find professional travel visa assistance services for tourist, business, and international visas from a trusted USA-based travel agency. Get help with documents, processing, and approvals.",
+      "isPartOf": {
+        "@id": "https://www.airlinesticketbooking.com/#website"
+      },
+      "about": {
+        "@id": "https://www.airlinesticketbooking.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://www.airlinesticketbooking.com/visa-service#service"
+      },
+      "breadcrumb": {
+        "@id": "https://www.airlinesticketbooking.com/visa-service#breadcrumb"
+      },
+      "inLanguage": "en-US"
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.airlinesticketbooking.com/visa-service#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.airlinesticketbooking.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Visa Service",
+          "item": "https://www.airlinesticketbooking.com/visa-service"
+        }
+      ]
+    }
+
+  ]
+}
+  `}
+</script>
+
+
+      </Helmet>
       <section
         className="min-h-[95vh] bg-cover bg-center flex items-center justify-center relative"
         style={{ backgroundImage: "url(/photos/visa-service.jpg.jpeg)" }}

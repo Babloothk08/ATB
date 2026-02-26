@@ -1,13 +1,19 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import SEO from "../components/SEO";
+import { Helmet } from "react-helmet";
 
 export default function TermsConditions() {
   const navigate = useNavigate();
 
   return (
     <>
-      <SEO title="Terms and Conditions | Airlines Ticket Booking" description="Book affordable hotels for international and domestic travel. Compare hotel prices, find exclusive deals and reserve rooms easily with our trusted US travel agency." canonical="https://www.airlinesticketbooking.com/term-and-condition" />
+      {/* <SEO title="Terms and Conditions | Airlines Ticket Booking" description="Book affordable hotels for international and domestic travel. Compare hotel prices, find exclusive deals and reserve rooms easily with our trusted US travel agency." canonical="https://www.airlinesticketbooking.com/term-and-condition" /> */}
+      <Helmet>
+        <title>Terms and Conditions | Airlines Ticket Booking</title>
+        <meta name="description" content="Book affordable hotels for international and domestic travel. Compare hotel prices, find exclusive deals and reserve rooms easily with our trusted US travel agency." />
+        <link rel="canonical" href="https://www.airlinesticketbooking.com/term-and-condition" />
+      </Helmet>
       <div className="max-w-5xl mx-auto px-4 py-10">
         <div className="mb-4 text-sm flex items-center gap-2">
           <Link to="/" className="text-gray-500 hover:text-blue-500">

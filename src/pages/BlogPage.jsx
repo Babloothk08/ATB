@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Bookmark, Calendar, Tag } from 'lucide-react';
 import SEO from '../components/SEO';
+import { Helmet } from 'react-helmet';
 
 const blogPosts = [
     {
@@ -50,11 +51,16 @@ const cardVariants = {
 export default function BlogPage() {
     return (
         <>
-            <SEO 
+            {/* <SEO 
              title='Travel Blog | Flight Booking, Visa & Travel Guides'
              description='Explore Airlines ticket booking travel blog for flight booking tips, airline fare insights, visa guidance, travel insurance advice and budget travel ideas.'
              canonical='https://www.airlinesticketbooking.com/blog'
-            />
+            /> */}
+            <Helmet>
+                <title>Travel Blog | Flight Booking, Visa & Travel Guides</title>
+                <meta name='description' content='Explore Airlines ticket booking travel blog for flight booking tips, airline fare insights, visa guidance, travel insurance advice and budget travel ideas.' />
+                <link rel="caninical" href="https://www.airlinesticketbooking.com/blog" />
+            </Helmet>
             <div className="py-24 md:py-32 bg-gray-50">
             <div className="container mx-auto px-6 max-w-7xl">
                 {/* Header */}

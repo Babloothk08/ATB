@@ -6,49 +6,49 @@ import { CheckCircle } from "lucide-react";
 import SEO from "../components/SEO";
 import { Helmet } from "react-helmet";
 
-const aboutSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "AboutPage",
-      "@id": "https://www.airlinesticketbooking.com/about#webpage",
-      "url": "https://www.airlinesticketbooking.com/about",
-      "name": "About Airlines Ticket Booking | USA Travel Agency",
-      "description": "Learn more about Airlines Ticket Booking...",
-      "isPartOf": {
-        "@id": "https://www.airlinesticketbooking.com/#website"
-      },
-      "about": {
-        "@id": "https://www.airlinesticketbooking.com/#organization"
-      },
-      "mainEntity": {
-        "@id": "https://www.airlinesticketbooking.com/#organization"
-      },
-      "inLanguage": "en-US",
-      "breadcrumb": {
-        "@id": "https://www.airlinesticketbooking.com/about#breadcrumb"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.airlinesticketbooking.com/about#breadcrumb",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.airlinesticketbooking.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "About Us",
-          "item": "https://www.airlinesticketbooking.com/about"
-        }
-      ]
-    }
-  ]
-};
+// const aboutSchema = {
+//   "@context": "https://schema.org",
+//   "@graph": [
+//     {
+//       "@type": "AboutPage",
+//       "@id": "https://www.airlinesticketbooking.com/about#webpage",
+//       "url": "https://www.airlinesticketbooking.com/about",
+//       "name": "About Airlines Ticket Booking | USA Travel Agency",
+//       "description": "Learn more about Airlines Ticket Booking...",
+//       "isPartOf": {
+//         "@id": "https://www.airlinesticketbooking.com/#website"
+//       },
+//       "about": {
+//         "@id": "https://www.airlinesticketbooking.com/#organization"
+//       },
+//       "mainEntity": {
+//         "@id": "https://www.airlinesticketbooking.com/#organization"
+//       },
+//       "inLanguage": "en-US",
+//       "breadcrumb": {
+//         "@id": "https://www.airlinesticketbooking.com/about#breadcrumb"
+//       }
+//     },
+//     {
+//       "@type": "BreadcrumbList",
+//       "@id": "https://www.airlinesticketbooking.com/about#breadcrumb",
+//       "itemListElement": [
+//         {
+//           "@type": "ListItem",
+//           "position": 1,
+//           "name": "Home",
+//           "item": "https://www.airlinesticketbooking.com/"
+//         },
+//         {
+//           "@type": "ListItem",
+//           "position": 2,
+//           "name": "About Us",
+//           "item": "https://www.airlinesticketbooking.com/about"
+//         }
+//       ]
+//     }
+//   ]
+// };
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -87,13 +87,17 @@ export default function AboutPage() {
 
   return (
     <>
-      <SEO
+      {/* <SEO
         title="About USA Travel Agency | Airlines Ticket Booking"
         description="Explore Airlines ticket booking travel blog for flight booking tips, airline fare insights, visa guidance, travel insurance advice and budget travel ideas."
         canonical="https://www.airlinesticketbooking.com/about"
-        schema={JSON.stringify(aboutSchema)}
-      />
-      
+       
+      /> */}
+      <Helmet>
+        <title>About USA Travel Agency | Airlines Ticket Booking</title>
+        <meta name="description" content="Explore Airlines ticket booking travel blog for flight booking tips, airline fare insights, visa guidance, travel insurance advice and budget travel ideas." />
+        <link rel="canonical" href="https://www.airlinesticketbooking.com/about" />
+
         <script type="application/ld+json">
           {`{
   "@context": "https://schema.org",
@@ -143,6 +147,9 @@ export default function AboutPage() {
 }
   `}
         </script>
+      </Helmet>
+      
+        
       
 
       <motion.div initial="hidden" animate="show" variants={containerVariants}>

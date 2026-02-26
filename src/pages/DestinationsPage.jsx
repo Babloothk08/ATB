@@ -9,9 +9,192 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import SEO from "../components/SEO";
+import { Helmet } from "react-helmet";
 
-const flightSchema = {
-    "@context": "https://schema.org",
+// const flightSchema = {
+//     "@context": "https://schema.org",
+//   "@graph": [
+
+//     {
+//       "@type": "Service",
+//       "@id": "https://www.airlinesticketbooking.com/flight-booking-services#service",
+//       "name": "Flight Booking Services",
+//       "description": "Professional flight booking services from the USA offering affordable domestic and international airline ticket reservations, competitive airfare deals, personalized support and secure online booking.",
+//       "serviceType": [
+//         "Domestic Flight Booking",
+//         "International Flight Booking",
+//         "Cheap Flight Deals",
+//         "Last Minute Flight Booking",
+//         "Multi-City Flight Booking"
+//       ],
+//       "provider": {
+//         "@id": "https://www.airlinesticketbooking.com/#organization"
+//       },
+//       "areaServed": {
+//         "@type": "Country",
+//         "name": "United States"
+//       },
+//       "availableChannel": {
+//         "@type": "ServiceChannel",
+//         "serviceUrl": "https://www.airlinesticketbooking.com/flight-booking-services",
+//         "availableLanguage": ["English"]
+//       }
+//     },
+
+//     {
+//       "@type": "WebPage",
+//       "@id": "https://www.airlinesticketbooking.com/flight-booking-services#webpage",
+//       "url": "https://www.airlinesticketbooking.com/flight-booking-services",
+//       "name": "Flight Booking Services from USA | Airline Ticket Booking",
+//       "description": "Book affordable domestic & international flights from the USA. Explore flight booking services, compare fares and get expert support from a trusted travel agency.",
+//       "isPartOf": {
+//         "@id": "https://www.airlinesticketbooking.com/#website"
+//       },
+//       "about": {
+//         "@id": "https://www.airlinesticketbooking.com/#organization"
+//       },
+//       "mainEntity": {
+//         "@id": "https://www.airlinesticketbooking.com/flight-booking-services#service"
+//       },
+//       "breadcrumb": {
+//         "@id": "https://www.airlinesticketbooking.com/flight-booking-services#breadcrumb"
+//       },
+//       "inLanguage": "en-US"
+//     },
+
+//     {
+//       "@type": "BreadcrumbList",
+//       "@id": "https://www.airlinesticketbooking.com/flight-booking-services#breadcrumb",
+//       "itemListElement": [
+//         {
+//           "@type": "ListItem",
+//           "position": 1,
+//           "name": "Home",
+//           "item": "https://www.airlinesticketbooking.com/"
+//         },
+//         {
+//           "@type": "ListItem",
+//           "position": 2,
+//           "name": "Flight Booking Services",
+//           "item": "https://www.airlinesticketbooking.com/flight-booking-services"
+//         }
+//       ]
+//     }
+
+//   ]
+// }
+
+
+// Consolidated Destination Data
+const allDestinations = {
+  USA: [
+    {
+      name: "New York",
+      img: "/photos/New York.jpeg",
+      desc: "The city that never sleeps, with unbeatable airfare deals.",
+    },
+    {
+      name: "Los Angeles",
+      img: "/photos/Los Angeles.jpg.jpeg",
+      desc: "Fly to the West Coast for Hollywood glamour and beautiful beaches.",
+    },
+    {
+      name: "Chicago",
+      img: "/photos/Chicago.jpg.jpeg",
+      desc: "Experience the Windy City's architecture and culinary scene.",
+    },
+    {
+      name: "Las Vegas",
+      img: "/photos/Las Vegas.jpg.jpeg",
+      desc: "Find cheap flights for your desert entertainment escape.",
+    },
+    {
+      name: "Washington D.C.",
+      img: "/photos/Washington D.C.jpg.jpeg",
+      desc: "The nation's capital, rich in history and culture.",
+    },
+    {
+      name: "San Francisco",
+      img: "/photos/San Francisco.jpg.jpeg",
+      desc: "Gateway to Northern California and the Golden Gate.",
+    },
+  ],
+  Europe: [
+    {
+      name: "London",
+      img: "/photos/London.jpeg",
+      desc: "Book your flight to the heart of the UK.",
+    },
+    {
+      name: "Paris",
+      img: "/photos/Paris..jpeg",
+      desc: "Romantic flights to the City of Light.",
+    },
+    {
+      name: "Rome",
+      img: "/photos/Rome.jpg.jpeg",
+      desc: "Ancient history and modern wonders await.",
+    },
+    {
+      name: "Barcelona",
+      img: "/photos/Barcelona.jpg.jpeg",
+      desc: "Sun, art, and Spanish culture—all in one trip.",
+    },
+    {
+      name: "Berlin",
+      img: "/photos/Berlin.jpg.jpeg",
+      desc: "Discover Germany's vibrant, historic capital.",
+    },
+    {
+      name: "Venice",
+      img: "/photos/Venice.jpg.jpeg",
+      desc: "Affordable travel to the city on the water.",
+    },
+  ],
+  Canada: [
+    {
+      name: "Toronto",
+      img: "/photos/Toronto.jpg.jpeg",
+      desc: "Canada's largest city and cultural hub.",
+    },
+    {
+      name: "Vancouver",
+      img: "/photos/Vancouver.jpg.jpeg",
+      desc: "Coastal mountains and metropolitan charm.",
+    },
+    {
+      name: "Montreal",
+      img: "/photos/Montreal.jpg.jpeg",
+      desc: "North America's taste of Europe.",
+    },
+  ],
+};
+
+const regions = ["USA", "Europe", "Canada"];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+};
+
+export default function DestinationsPage() {
+  const [activeRegion, setActiveRegion] = useState("USA");
+
+  return (
+    <>
+      {/* <SEO 
+      title='Book affordable Flights from USA | Airlines Ticket Booking'
+      description='Search and book affordable domestic and international flights from the USA. Compare airline fares, get exclusive flight deals and reserve tickets easily online.'
+      canonical='https://www.airlinesticketbooking.com/flight-booking-services'
+      
+      /> */}
+      <Helmet>
+        <title>Book affordable Flights from USA | Airlines Ticket Booking</title>
+        <meta name="description" content="Search and book affordable domestic and international flights from the USA. Compare airline fares, get exclusive flight deals and reserve tickets easily online." />
+        <link rel="conanical" href="https://www.airlinesticketbooking.com/flight-booking-services" />
+        <script type="application/ld+json">
+{ `{
+  "@context": "https://schema.org",
   "@graph": [
 
     {
@@ -81,112 +264,11 @@ const flightSchema = {
     }
 
   ]
-}
+} `}
+</script>
 
 
-// Consolidated Destination Data
-const allDestinations = {
-  USA: [
-    {
-      name: "New York",
-      img: "https://i.postimg.cc/BQMTfFqh/Explore-Your-Dream-Destinations-new-york.jpg",
-      desc: "The city that never sleeps, with unbeatable airfare deals.",
-    },
-    {
-      name: "Los Angeles",
-      img: "https://i.postimg.cc/KYkvQ1cC/Worldwide-Destinations-los-angeles.jpg",
-      desc: "Fly to the West Coast for Hollywood glamour and beautiful beaches.",
-    },
-    {
-      name: "Chicago",
-      img: "https://i.postimg.cc/YSGq8v2b/Explore-Your-Dream-Destinations-chicago.jpg",
-      desc: "Experience the Windy City's architecture and culinary scene.",
-    },
-    {
-      name: "Las Vegas",
-      img: "https://i.postimg.cc/KvJPhTZJ/Explore-Your-Dream-Destinations-las-vegas.jpg",
-      desc: "Find cheap flights for your desert entertainment escape.",
-    },
-    {
-      name: "Washington D.C.",
-      img: "https://i.postimg.cc/4NJ60PTq/Worldwide-Destinations-washington.jpg",
-      desc: "The nation's capital, rich in history and culture.",
-    },
-    {
-      name: "San Francisco",
-      img: "https://i.postimg.cc/GhcFfK1N/Worldwide-Destinations-san-fransisco.jpg",
-      desc: "Gateway to Northern California and the Golden Gate.",
-    },
-  ],
-  Europe: [
-    {
-      name: "London",
-      img: "https://i.postimg.cc/9FJdH9W6/Explore-Your-Dream-Destinations-london.jpg",
-      desc: "Book your flight to the heart of the UK.",
-    },
-    {
-      name: "Paris",
-      img: "https://i.postimg.cc/dt42cCsK/Explore-Your-Dream-Destinations-Paris.jpg",
-      desc: "Romantic flights to the City of Light.",
-    },
-    {
-      name: "Rome",
-      img: "https://i.postimg.cc/RVX7xtMY/Explore-Your-Dream-Destinations-rome.jpg",
-      desc: "Ancient history and modern wonders await.",
-    },
-    {
-      name: "Barcelona",
-      img: "https://i.postimg.cc/X7VfPL02/Worldwide-Destinations-barcelona.jpg",
-      desc: "Sun, art, and Spanish culture—all in one trip.",
-    },
-    {
-      name: "Berlin",
-      img: "https://i.postimg.cc/028Y4nqV/Worldwide-Destinations-berlin.jpg",
-      desc: "Discover Germany's vibrant, historic capital.",
-    },
-    {
-      name: "Venice",
-      img: "https://i.postimg.cc/dtq2f6Km/Worldwide-Destinations-venice.jpg",
-      desc: "Affordable travel to the city on the water.",
-    },
-  ],
-  Canada: [
-    {
-      name: "Toronto",
-      img: "https://i.postimg.cc/VL4b370W/destination-toronto.jpg",
-      desc: "Canada's largest city and cultural hub.",
-    },
-    {
-      name: "Vancouver",
-      img: "https://i.postimg.cc/D0m6fHw3/destination-vancouver.jpg",
-      desc: "Coastal mountains and metropolitan charm.",
-    },
-    {
-      name: "Montreal",
-      img: "https://i.postimg.cc/9F7d2rLp/destination-montreal.jpg",
-      desc: "North America's taste of Europe.",
-    },
-  ],
-};
-
-const regions = ["USA", "Europe", "Canada"];
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-};
-
-export default function DestinationsPage() {
-  const [activeRegion, setActiveRegion] = useState("USA");
-
-  return (
-    <>
-      <SEO 
-      title='Book affordable Flights from USA | Airlines Ticket Booking'
-      description='Search and book affordable domestic and international flights from the USA. Compare airline fares, get exclusive flight deals and reserve tickets easily online.'
-      canonical='https://www.airlinesticketbooking.com/flight-booking-services'
-      schema={JSON.stringify(flightSchema)}
-      />
+      </Helmet>
       <div className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-6 max-w-7xl">
           {/* Header */}

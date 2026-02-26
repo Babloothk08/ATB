@@ -1,15 +1,98 @@
 import React from "react";
 import SEO from "../components/SEO";
+import { Helmet } from "react-helmet";
 
 export default function Insurance() {
   return (
     <>
-      <SEO
+      {/* <SEO
         title="International Travel Insurance from USA | Airlines Ticket Booking"
         description="Compare and buy international travel insurance from the USA. Protect your trip with medical, trip delay and cancellation coverage for global travel."
         canonical="https://www.airlinesticketbooking.com/travel-insurance"
-      />
+      /> */}
+      <Helmet>
+        <title>International Travel Insurance from USA | Airlines Ticket Booking</title>
+        <meta name="description" content="Compare and buy international travel insurance from the USA. Protect your trip with medical, trip delay and cancellation coverage for global travel." />
 
+        <link rel="canonical" href="https://www.airlinesticketbooking.com/travel-insurance" />
+        <script type="application/ld+json">
+{ `{
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Service",
+      "@id": "https://www.airlinesticketbooking.com/travel-insurance#service",
+      "name": "International Travel Insurance Services",
+      "description": "Comprehensive international travel insurance services to protect travelers from the USA against unexpected medical emergencies, trip cancellations, baggage loss, and travel interruptions. Secure peace of mind with coverage that fits your travel needs.",
+      "serviceType": [
+        "Travel Insurance",
+        "International Travel Insurance",
+        "Medical Travel Insurance",
+        "Trip Cancellation Coverage",
+        "Baggage Loss Protection"
+      ],
+      "provider": {
+        "@id": "https://www.airlinesticketbooking.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.airlinesticketbooking.com/travel-insurance",
+        "availableLanguage": ["English"]
+      }
+    },
+
+    {
+      "@type": "WebPage",
+      "@id": "https://www.airlinesticketbooking.com/travel-insurance#webpage",
+      "url": "https://www.airlinesticketbooking.com/travel-insurance",
+      "name": "Travel Insurance Services | International Travel Coverage",
+      "description": "Get reliable international travel insurance from the USA with coverage for medical emergencies, trip interruptions, baggage loss, and delay protection. Compare plans and secure your travel insurance easily online.",
+      "isPartOf": {
+        "@id": "https://www.airlinesticketbooking.com/#website"
+      },
+      "about": {
+        "@id": "https://www.airlinesticketbooking.com/#organization"
+      },
+      "mainEntity": {
+        "@id": "https://www.airlinesticketbooking.com/travel-insurance#service"
+      },
+      "breadcrumb": {
+        "@id": "https://www.airlinesticketbooking.com/travel-insurance#breadcrumb"
+      },
+      "inLanguage": "en-US"
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.airlinesticketbooking.com/travel-insurance#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.airlinesticketbooking.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Travel Insurance",
+          "item": "https://www.airlinesticketbooking.com/travel-insurance"
+        }
+      ]
+    }
+
+  ]
+}
+  `}
+</script>
+
+
+      </Helmet>
       <section
         className="min-h-[95vh] w-full bg-cover bg-center flex items-center justify-center relative"
         style={{ backgroundImage: "url(/photos/travel-insurance.jpg.jpeg)" }}
