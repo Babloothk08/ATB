@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Bookmark, Calendar, Tag } from 'lucide-react';
-import SEO from '../components/SEO';
+
 import { Helmet } from 'react-helmet';
 
 const blogPosts = [

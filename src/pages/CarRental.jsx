@@ -134,8 +134,8 @@ export default function CarRental() {
           href="https://www.airlinesticketbooking.com/car-rental-services"
         />
 
-        {/* <script type="application/ld+json">
-          {`{
+        <script type="application/ld+json">
+{ `{
   "@context": "https://schema.org",
   "@graph": [
 
@@ -206,8 +206,10 @@ export default function CarRental() {
     }
 
   ]
-}` }
-        </script> */}
+} `}
+</script>
+
+
       </Helmet>
 
       <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mountain, Users, Plane, Star, Filter } from "lucide-react";
-import SEO from "../components/SEO";
+
 import { Helmet } from "react-helmet";
 
 const packagesData = [
