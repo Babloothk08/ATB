@@ -8,7 +8,7 @@ import {
   Globe2,
   CheckCircle2,
 } from "lucide-react";
-import SEO from "../components/SEO";
+
 import { Helmet } from "react-helmet";
 
 // const flightSchema = {
@@ -191,7 +191,7 @@ export default function DestinationsPage() {
       <Helmet>
         <title>Book affordable Flights from USA | Airlines Ticket Booking</title>
         <meta name="description" content="Search and book affordable domestic and international flights from the USA. Compare airline fares, get exclusive flight deals and reserve tickets easily online." />
-        <link rel="conanical" href="https://www.airlinesticketbooking.com/flight-booking-services" />
+        <link rel="canonical" href="https://www.airlinesticketbooking.com/flight-booking-services" />
         <script type="application/ld+json">
 { `{
   "@context": "https://schema.org",

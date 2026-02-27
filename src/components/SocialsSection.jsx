@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaPinterestP } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function SocialsSection() {
     const socials = [
@@ -85,9 +86,12 @@ export default function SocialsSection() {
                 </div>
 
                 {/* Follow Button */}
-                <a href="tel:+1-844-821-5950">  <button className="bg-teal-700 text-white px-8 py-3 rounded-md font-semibold shadow hover:bg-teal-800 transition-all">
+                {/* <a href="tel:+1-844-821-5950">  <button className="bg-teal-700 text-white px-8 py-3 rounded-md font-semibold shadow hover:bg-teal-800 transition-all">
                     Call Us
-                </button></a>
+                </button></a> */}
+                <Link to="/contact-us">
+                    <button className="bg-teal-700 hover:bg-teal-800 px-4 py-2 text-white  rounded-xl hover:transition-all hover:scale-105 font-medium">Call Us</button>
+                </Link>
             </div>
         </section>
     );

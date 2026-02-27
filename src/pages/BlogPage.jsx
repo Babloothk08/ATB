@@ -59,7 +59,7 @@ export default function BlogPage() {
             <Helmet>
                 <title>Travel Blog | Flight Booking, Visa & Travel Guides</title>
                 <meta name='description' content='Explore Airlines ticket booking travel blog for flight booking tips, airline fare insights, visa guidance, travel insurance advice and budget travel ideas.' />
-                <link rel="caninical" href="https://www.airlinesticketbooking.com/blog" />
+                <link rel="canonical" href="https://www.airlinesticketbooking.com/blog" />
             </Helmet>
             <div className="py-24 md:py-32 bg-gray-50">
             <div className="container mx-auto px-6 max-w-7xl">
