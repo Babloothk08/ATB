@@ -43,9 +43,9 @@ export default function ATBFAQ() {
     return (
         <div className="min-h-screen bg-gray-50 py-12 px-6">
             <div className="max-w-4xl mx-auto">
-                <h1 className="text-4xl font-bold text-center mb-6">
+                <h2 className="text-4xl font-bold text-center mb-6">
                     ATB – Frequently Asked Questions
-                </h1>
+                </h2>
                 <p className="text-gray-600 text-center max-w-2xl mx-auto mb-12">
                     Find quick answers about booking, payments, baggage, and flight changes.
                 </p>

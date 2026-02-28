@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn , FaPinterest , FaYoutube } from "react-icons/fa";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
@@ -17,6 +17,65 @@ export default function Footer() {
                         Experience seamless flight booking with unbeatable deals and
                         unmatched support. Your journey begins with just one click!
                     </p>
+                    {/* Social Links */}
+                <div className="mt-3">
+                    {/* <h3 className="text-white text-lg font-semibold mb-4">Follow Us</h3> */}
+                    <div className="flex gap-4">
+                        
+                        <a
+                            href="https://www.facebook.com/airlinesticketbooking1/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-700 flex items-center justify-center transition-all"
+                            aria-label="Facebook"
+                        >
+                            <FaFacebookF />
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/airlinesticketbooking/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-full bg-pink-500 hover:bg-pink-600 flex items-center justify-center transition-all"
+                            aria-label="Instagram"
+                        >
+                            <FaInstagram />
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/company/airlines-ticket-booking1/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-full bg-blue-800 hover:bg-blue-900 flex items-center justify-center transition-all"
+                            aria-label="LinkedIn"
+                        >
+                            <FaLinkedinIn />
+                        </a>
+
+                        <a
+                            href="https://www.pinterest.com/airlinesticketbooking/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-full bg-sky-500 hover:bg-sky-600 flex items-center justify-center transition-all"
+                            aria-label="Twitter"
+                        >
+                            <FaPinterest />
+                        </a>
+
+                        <a
+                            href="https://www.youtube.com/@airlinesticketbooking1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-10 h-10 rounded-full bg-red-500 hover:bg-red-600 flex items-center justify-center transition-all"
+                            aria-label="Twitter"
+                        >
+                            <FaYoutube />
+                        </a>
+
+                       
+
+                    </div>
+                </div>
                 </div>
 
                 {/* Quick Links */}
@@ -111,6 +170,7 @@ export default function Footer() {
                     </div>
                 </div> */}
             </div>
+            
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
