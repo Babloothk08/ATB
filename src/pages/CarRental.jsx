@@ -200,7 +200,7 @@ export default function CarRental() {
           "@type": "ListItem",
           "position": 2,
           "name": "Car Rental Services",
-          "item": "https://www.airlinesticketbooking.com/car-rental-services"
+          "item": "https://www.airlinesticketbooking.com/car-rental-services",
         }
       ]
     }
